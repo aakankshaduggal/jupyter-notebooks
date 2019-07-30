@@ -40,7 +40,7 @@
                   "git": {
                       "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                   },
-                  "contextDir": "minimal-notebook"
+                  "contextDir": "minimal-notebook-with-libsndfile"
               },
               "strategy": {
                   "type": "Source",
@@ -54,7 +54,7 @@
               "output": {
                   "to": {
                       "kind": "ImageStreamTag",
-                      "name": "s2i-spark-minimal-notebook:3.6"
+                      "name": "s2i-spark-minimal-notebook-with-libsndfile:3.6"
                   }
               },
               "resources": {
@@ -68,9 +68,9 @@
         "kind": "ImageStream",
         "apiVersion": "v1",
         "metadata": {
-            "name": "s2i-spark-scipy-notebook",
+            "name": "s2i-spark-scipy-notebook-with-libsndfile",
             "labels": {
-                "build": "s2i-spark-scipy-notebook"
+                "build": "s2i-spark-scipy-notebook-with-libsndfile"
             }
         },
         "spec": {
@@ -83,9 +83,9 @@
         "kind": "BuildConfig",
         "apiVersion": "v1",
         "metadata": {
-            "name": "s2i-spark-scipy-notebook",
+            "name": "s2i-spark-scipy-notebook-with-libsndfile",
             "labels": {
-                "build": "s2i-spark-scipy-notebook"
+                "build": "s2i-spark-scipy-notebook-with-libsndfile"
             }
         },
         "spec": {
@@ -102,7 +102,7 @@
                 "git": {
                     "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                 },
-                "contextDir": "scipy-notebook"
+                "contextDir": "scipy-notebook-with-libsndfile"
             },
             "strategy": {
                 "type": "Source",
