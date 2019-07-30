@@ -6,9 +6,9 @@
           "kind": "ImageStream",
           "apiVersion": "v1",
           "metadata": {
-              "name": "s2i-spark-minimal-notebook",
+              "name": "s2i-spark-minimal-notebook-with-libsndfile",
               "labels": {
-                  "build": "s2i-spark-minimal-notebook"
+                  "build": "s2i-spark-minimal-notebook-with-libsndfile"
               }
           },
           "spec": {
@@ -21,9 +21,9 @@
           "kind": "BuildConfig",
           "apiVersion": "v1",
           "metadata": {
-              "name": "s2i-spark-minimal-notebook",
+              "name": "s2i-spark-minimal-notebook-with-libsndfile",
               "labels": {
-                  "build": "s2i-spark-minimal-notebook"
+                  "build": "s2i-spark-minimal-notebook-with-libsndfile"
               }
           },
           "spec": {
@@ -38,7 +38,7 @@
               "source": {
                   "type": "Git",
                   "git": {
-                      "uri": "https://github.com/vpavlin/jupyter-notebooks"
+                      "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                   },
                   "contextDir": "minimal-notebook"
               },
@@ -47,7 +47,7 @@
                   "sourceStrategy": {
                       "from": {
                           "kind": "DockerImage",
-                          "name": "quay.io/vpavlin/python36-spark-ubi7:latest"
+                          "name": "quay.io/aduggal/python36-spark-ubi7-with-libsndfile:latest"
                       }
                   }
               },
@@ -100,7 +100,7 @@
             "source": {
                 "type": "Git",
                 "git": {
-                    "uri": "https://github.com/vpavlin/jupyter-notebooks"
+                    "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                 },
                 "contextDir": "scipy-notebook"
             },
@@ -109,14 +109,14 @@
                 "sourceStrategy": {
                     "from": {
                         "kind": "ImageStreamTag",
-                        "name": "s2i-spark-minimal-notebook:3.6"
+                        "name": "s2i-spark-minimal-notebook-with-libsndfile:3.6"
                     }
                 }
             },
             "output": {
                 "to": {
                     "kind": "ImageStreamTag",
-                    "name": "s2i-spark-scipy-notebook:3.6"
+                    "name": "s2i-spark-scipy-notebook-with-libsndfile:3.6"
                 }
             },
             "resources": {
