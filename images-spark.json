@@ -40,7 +40,7 @@
                   "git": {
                       "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                   },
-                  "contextDir": "minimal-notebook-with-libsndfile"
+                  "contextDir": "minimal-notebook"
               },
               "strategy": {
                   "type": "Source",
