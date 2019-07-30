@@ -102,7 +102,7 @@
                 "git": {
                     "uri": "https://github.com/aakankshaduggal/jupyter-notebooks"
                 },
-                "contextDir": "scipy-notebook-with-libsndfile"
+                "contextDir": "scipy-notebook"
             },
             "strategy": {
                 "type": "Source",
